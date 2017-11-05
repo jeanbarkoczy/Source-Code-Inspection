@@ -8,11 +8,12 @@ import java.util.Iterator;
  *
  * @author Calebe de Paula Bianchini
  */
+@SuppressWarnings("empty-statement")
 public class TicketMachine {
 
-    protected int valor;
-    protected int saldo;
-    protected int[] papelMoeda = {2, 5, 10, 20, 50, 100};
+    public int valor;
+    public int saldo;
+    public int[] papelMoeda = {2, 5, 10, 20, 50, 100};
 
     public TicketMachine(int valor) {
         this.valor = valor;
@@ -37,16 +38,18 @@ public class TicketMachine {
     }
 
     public Iterator<Integer> getTroco() {
+
+    /**
+     *
+     * @param troco
+     */
+    public static void TicketMachine(Troco troco) {
+            this.troco = troco;
+            return troco;
+        }
+   }
+}
         return null;
     }
 
-    public String imprimir() throws SaldoInsuficienteException {
-        if (saldo < valor) {
-            throw new SaldoInsuficienteException();
-        }
-        String result = "*****************\n";
-        result += "*** R$ " + saldo + ",00 ****\n";
-        result += "*****************\n";
-        return result;
-    }
-}
+   
